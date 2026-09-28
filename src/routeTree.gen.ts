@@ -10,33 +10,109 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ScanRouteImport } from './routes/scan'
+import { Route as SearchRouteImport } from './routes/search'
+import { Route as TeamRouteImport } from './routes/team'
+import { Route as WastesIndexRouteImport } from './routes/wastes.index'
+import { Route as WastesSlugRouteImport } from './routes/wastes.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScanRoute = ScanRouteImport.update({
+  id: '/scan',
+  path: '/scan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SearchRoute = SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeamRoute = TeamRouteImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WastesIndexRoute = WastesIndexRouteImport.update({
+  id: '/wastes/',
+  path: '/wastes/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WastesSlugRoute = WastesSlugRouteImport.update({
+  id: '/wastes/$slug',
+  path: '/wastes/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/scan': typeof ScanRoute
+  '/search': typeof SearchRoute
+  '/team': typeof TeamRoute
+  '/wastes/$slug': typeof WastesSlugRoute
+  '/wastes/': typeof WastesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/scan': typeof ScanRoute
+  '/search': typeof SearchRoute
+  '/team': typeof TeamRoute
+  '/wastes/$slug': typeof WastesSlugRoute
+  '/wastes': typeof WastesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/scan': typeof ScanRoute
+  '/search': typeof SearchRoute
+  '/team': typeof TeamRoute
+  '/wastes/$slug': typeof WastesSlugRoute
+  '/wastes/': typeof WastesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/scan'
+    | '/search'
+    | '/team'
+    | '/wastes/$slug'
+    | '/wastes/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    '/' | '/about' | '/scan' | '/search' | '/team' | '/wastes/$slug' | '/wastes'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/scan'
+    | '/search'
+    | '/team'
+    | '/wastes/$slug'
+    | '/wastes/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ScanRoute: typeof ScanRoute
+  SearchRoute: typeof SearchRoute
+  TeamRoute: typeof TeamRoute
+  WastesSlugRoute: typeof WastesSlugRoute
+  WastesIndexRoute: typeof WastesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +124,59 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scan': {
+      id: '/scan'
+      path: '/scan'
+      fullPath: '/scan'
+      preLoaderRoute: typeof ScanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/team': {
+      id: '/team'
+      path: '/team'
+      fullPath: '/team'
+      preLoaderRoute: typeof TeamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wastes/': {
+      id: '/wastes/'
+      path: '/wastes'
+      fullPath: '/wastes/'
+      preLoaderRoute: typeof WastesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wastes/$slug': {
+      id: '/wastes/$slug'
+      path: '/wastes/$slug'
+      fullPath: '/wastes/$slug'
+      preLoaderRoute: typeof WastesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ScanRoute: ScanRoute,
+  SearchRoute: SearchRoute,
+  TeamRoute: TeamRoute,
+  WastesSlugRoute: WastesSlugRoute,
+  WastesIndexRoute: WastesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
