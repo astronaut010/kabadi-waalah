@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as WastesIndexRouteImport } from './routes/wastes.index'
+import { Route as WastesSlugRouteImport } from './routes/wastes.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WastesIndexRoute = WastesIndexRouteImport.update({
+  id: '/wastes/',
+  path: '/wastes/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WastesSlugRoute = WastesSlugRouteImport.update({
+  id: '/wastes/$slug',
+  path: '/wastes/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/wastes/$slug': typeof WastesSlugRoute
+  '/wastes/': typeof WastesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/wastes/$slug': typeof WastesSlugRoute
+  '/wastes': typeof WastesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/wastes/$slug': typeof WastesSlugRoute
+  '/wastes/': typeof WastesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/wastes/$slug' | '/wastes/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/wastes/$slug' | '/wastes'
+  id: '__root__' | '/' | '/wastes/$slug' | '/wastes/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  WastesSlugRoute: typeof WastesSlugRoute
+  WastesIndexRoute: typeof WastesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/wastes/': {
+      id: '/wastes/'
+      path: '/wastes'
+      fullPath: '/wastes/'
+      preLoaderRoute: typeof WastesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wastes/$slug': {
+      id: '/wastes/$slug'
+      path: '/wastes/$slug'
+      fullPath: '/wastes/$slug'
+      preLoaderRoute: typeof WastesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  WastesSlugRoute: WastesSlugRoute,
+  WastesIndexRoute: WastesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
