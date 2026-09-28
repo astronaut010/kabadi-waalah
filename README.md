@@ -1,8 +1,28 @@
 # Kabaadi Connect
 
-Hi.now i need you to create a MVP platform for supporting kabadi walas to get information about what type of waste is they collected by scanning throgh camera ,if they scan theyget a information of what type of product is that ,how to recycle it ,what product can be developed by using the waste product as source,upto three recycling product and their contact dealers,company. use my scrap value feature docx as guiding document and scrap value 20 product as complete dataset. i need extra feature like camera to sacn the product and tell what product is that, and three language features tamil,english,hindi.and search option in all three languages so they can search.app ux design: at hero scetion only app name ,intro and camera scan buttopn at upper bar there should me home,about us,team. at right corner scan,search,language.after hero section there should about us section,next app feature as next section,then how to scan /search as guidelines,then a small description about how much its important for india to recycle the waste and market analysis.in that section give me small button of details,that details button open as subpage showing 20 different waste with picture as like small cards can scroll,then if they open the card it open as subpage and explain the type of waste ,recyclable product1 ,its company details,recyclable product 2 its dealer details upto 3,then last section team behind(i give you later about team details) also powerful punchline as "let the knowlege reach its right people".
+About Us
 
-This project was built with [Lovable](https://lovable.dev).
+We are from Madurai.
+
+The city of Meenakshi Amman Temple, of jasmine that perfumes the streets at dawn, of Jigarthanda on a hot afternoon. It is also a city where overflowing bins and roadside waste are part of everyday life, and we grew up walking past them.
+
+But we noticed something else too. Every morning, before most of us are awake, someone is already at work: the kabadiwala with a cycle cart, the waste picker with a sack on their shoulder. They collect the plastic, paper, metal and glass that the rest of us throw away. They keep our city from drowning in its own waste, and they get almost none of the credit.
+
+They also don't know what their work is worth.
+
+A kabadiwala often can't tell whether a buyer's price is fair. Copper, aluminium and PET bottles all have very different values, but the person holding them is usually left to trust whatever number is offered. The people who do the hardest part of recycling earn the least from it.
+
+That is why we built Scrap Value.
+
+Point your phone at a piece of waste, and the app tells you what it is, what it can become, what it is worth today, and which buyer nearby will pay a fair price. It works with icons first, words second, in Tamil and Hindi, and with your voice, because the people we built it for shouldn't need to read English to use it.
+
+We are not claiming to fix Madurai's waste problem. But we believe it becomes a little smaller when the person who collects the waste knows the value of what they hold.
+
+To us, waste is not garbage. It is someone's livelihood, and it is a city's second chance.
+
+Scrap Value: because every kabadiwala deserves to know what their work is worth.
+
+
 
 **Live app**: https://kabadi-waalah.lovable.app
 
