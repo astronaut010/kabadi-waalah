@@ -1,6 +1,6 @@
 # Kabaadi Connect
 
-*About Us*
+#About Us
 
 We are from Madurai.
 
