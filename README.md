@@ -27,4 +27,4 @@ Scrap Value: because every kabadiwala deserves to know what their work is worth.
 **Live app**: https://kabadi-waalah.lovable.app
 
 
-```
+
