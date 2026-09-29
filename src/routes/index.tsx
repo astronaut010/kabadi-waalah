@@ -30,6 +30,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   const { t, lang } = useLang();
   const preview = WASTES.slice(0, 6);
+  const featured = WASTES[0]!;
 
   return (
     <div className="min-h-screen bg-background">
@@ -102,7 +103,7 @@ function Index() {
                     {t("scanResult")} · PET
                   </div>
                   <div className="font-display text-xl text-heading">
-                    {WASTES[0].name[lang]}
+                    {featured.name[lang]}
                   </div>
                 </div>
                 <div className="rounded-md bg-primary-soft px-2 py-1 text-xs text-primary">
@@ -110,7 +111,7 @@ function Index() {
                 </div>
               </div>
               <div className="mt-3 grid grid-cols-3 gap-2">
-                {WASTES[0].pathways.map((p, i) => (
+                {featured.pathways.map((p, i) => (
                   <div key={i} className="rounded-lg bg-primary-soft p-2.5">
                     <div className="text-[11px] font-semibold text-primary">
                       {i + 1}
