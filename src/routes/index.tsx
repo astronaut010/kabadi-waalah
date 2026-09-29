@@ -6,6 +6,8 @@ import { WasteCard } from "@/components/WasteCard";
 import { WASTES } from "@/data/wastes";
 import { useLang } from "@/lib/i18n";
 import heroImage from "@/assets/hero-scan.jpg";
+import { VisionSection } from "@/components/VisionSection";
+import { TeamGrid } from "@/components/TeamGrid";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -128,9 +130,6 @@ function Index() {
         <section id="about" className="border-t border-border py-12 sm:py-16">
           <div className="grid gap-8 lg:grid-cols-12">
             <div className="lg:col-span-5">
-              <div className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
-                {t("aboutKicker")}
-              </div>
               <h2 className="mt-2 font-display text-3xl tracking-tight text-heading text-balance sm:text-4xl">
                 {t("aboutTitle")}
               </h2>
@@ -138,21 +137,15 @@ function Index() {
             <div className="space-y-4 text-body text-pretty lg:col-span-7">
               <p>{t("aboutBody1")}</p>
               <p>{t("aboutBody2")}</p>
-              <Link
-                to="/about"
-                className="inline-flex text-sm font-semibold text-primary hover:underline"
-              >
-                {t("navAbout")} →
-              </Link>
+              <p>{t("impactBody")}</p>
             </div>
           </div>
         </section>
 
+        <VisionSection />
+
         {/* FEATURES */}
         <section className="border-t border-border py-12 sm:py-16">
-          <div className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
-            {t("featuresKicker")}
-          </div>
           <h2 className="mt-2 max-w-[26ch] font-display text-3xl tracking-tight text-heading text-balance sm:text-4xl">
             {t("featuresTitle")}
           </h2>
@@ -175,9 +168,6 @@ function Index() {
 
         {/* GUIDE */}
         <section id="guide" className="border-t border-border py-12 sm:py-16">
-          <div className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
-            {t("guideKicker")}
-          </div>
           <h2 className="mt-2 max-w-[24ch] font-display text-3xl tracking-tight text-heading text-balance sm:text-4xl">
             {t("guideTitle")}
           </h2>
@@ -216,9 +206,6 @@ function Index() {
         <section className="border-t border-border py-12 sm:py-16">
           <div className="grid items-start gap-8 lg:grid-cols-12">
             <div className="lg:col-span-5">
-              <div className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
-                {t("impactKicker")}
-              </div>
               <h2 className="mt-2 font-display text-3xl tracking-tight text-heading text-balance sm:text-4xl">
                 {t("impactTitle")}
               </h2>
@@ -263,19 +250,10 @@ function Index() {
 
         {/* TEAM */}
         <section id="team" className="border-t border-border py-12 sm:py-16">
-          <div className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
-            {t("teamKicker")}
-          </div>
           <h2 className="mt-2 font-display text-3xl tracking-tight text-heading sm:text-4xl">
             {t("teamTitle")}
           </h2>
-          <p className="mt-3 max-w-[50ch] text-body">{t("teamPending")}</p>
-          <Link
-            to="/team"
-            className="mt-4 inline-flex text-sm font-semibold text-primary hover:underline"
-          >
-            {t("navTeam")} →
-          </Link>
+          <TeamGrid />
         </section>
       </main>
 
