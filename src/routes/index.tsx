@@ -102,14 +102,14 @@ function Index() {
               <div className="mt-3 flex items-center justify-between">
                 <div>
                   <div className="text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground">
-                    {t("scanResult")} · PET
+                    IDENTIFIED 
                   </div>
                   <div className="font-display text-xl text-heading">
-                    {featured.name[lang]}
+                    {" "}
                   </div>
                 </div>
                 <div className="rounded-md bg-primary-soft px-2 py-1 text-xs text-primary">
-                  ₹15–22/kg
+                  {"\n"}
                 </div>
               </div>
               <div className="mt-3 grid grid-cols-3 gap-2">
@@ -118,7 +118,7 @@ function Index() {
                     <div className="text-[11px] font-semibold text-primary">
                       {i + 1}
                     </div>
-                    <div className="line-clamp-2 text-xs text-body">{p.product[lang]}</div>
+                    <div className="line-clamp-2 text-xs text-body">{[" SCAN", "KNOW", "EARN"][i]}</div>
                   </div>
                 ))}
               </div>
