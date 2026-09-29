@@ -31,9 +31,6 @@ function AboutPage() {
     <div className="min-h-screen bg-background">
       <SiteHeader />
       <main className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14">
-        <div className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
-          {t("aboutKicker")}
-        </div>
         <h1 className="mt-2 max-w-[24ch] font-display text-4xl tracking-tight text-heading text-balance sm:text-5xl">
           {t("aboutTitle")}
         </h1>

@@ -29,6 +29,9 @@ export function SiteHeader() {
           <Link to="/about" className="hover:text-primary">
             {t("navAbout")}
           </Link>
+          <a href="/#vision" className="hover:text-primary">
+            Our Vision
+          </a>
           <Link to="/team" className="hover:text-primary">
             {t("navTeam")}
           </Link>
