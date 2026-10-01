@@ -18,6 +18,8 @@ export const Route = createFileRoute("/scan")({
         content:
           "Point your camera at any scrap item and Scrap Value names the material, its recycling pathways and the recyclers who buy it.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { property: "og:title", content: "Scan your scrap — Scrap Value" },
       {
         property: "og:description",
@@ -138,7 +140,7 @@ function ScanPage() {
                 className="size-full object-cover"
               />
             ) : shot ? (
-              <img src={shot} alt="Captured scrap" className="size-full object-cover" />
+              <img src={shot} alt={t("capturedScrapAlt")} className="size-full object-cover" />
             ) : (
               <Camera className="size-16 text-primary opacity-60" />
             )}

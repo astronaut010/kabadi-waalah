@@ -9,7 +9,6 @@
 - [x] Waste detail subpage: 3 recycling pathways + dealer contacts
 - [x] Camera scan page (AI identification, verified working)
 - [x] Search page (trilingual)
-- [x] About us / Team pages
+- [x] About us / Team pages, including a balanced two-member layout
 - [x] Images in white + #9a2fc4 palette
-
-Open: real team member details — waiting on the user.
+- [x] All shared page copy and vision narrative translated in English / Tamil / Hindi

@@ -13,6 +13,8 @@ export const Route = createFileRoute("/team")({
         content:
           "The people building Scrap Value, a trilingual recycling companion for India's kabadi walas.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { property: "og:title", content: "The team behind Scrap Value" },
       {
         property: "og:description",
@@ -30,14 +32,11 @@ function TeamPage() {
     <div className="min-h-screen bg-background">
       <SiteHeader />
       <main className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14">
-        <h1 className="mt-2 font-display text-4xl tracking-tight text-heading sm:text-5xl">
+        <h1 className="text-center font-display text-4xl tracking-tight text-heading sm:text-5xl">
           {t("teamTitle")}
         </h1>
+        <p className="mx-auto mt-3 max-w-[58ch] text-center text-body">{t("teamIntro")}</p>
         <TeamGrid />
-
-        <p className="mt-10 font-display text-[clamp(1.5rem,4vw,2.5rem)] leading-tight text-heading">
-          {t("punchline")}
-        </p>
       </main>
       <SiteFooter />
     </div>

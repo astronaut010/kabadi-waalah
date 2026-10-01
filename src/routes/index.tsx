@@ -24,6 +24,8 @@ export const Route = createFileRoute("/")({
         content:
           "Scan any scrap with your camera and get the material, its recycling pathways and real dealer contacts in English, Tamil or Hindi.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Index,
@@ -102,7 +104,7 @@ function Index() {
               <div className="mt-3 flex items-center justify-between">
                 <div>
                   <div className="text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground">
-                    IDENTIFIED 
+                    {t("identified")} 
                   </div>
                   <div className="font-display text-xl text-heading">
                     {" "}
@@ -118,7 +120,7 @@ function Index() {
                     <div className="text-[11px] font-semibold text-primary">
                       {i + 1}
                     </div>
-                    <div className="line-clamp-2 text-xs text-body">{[" SCAN", "KNOW", "EARN"][i]}</div>
+                    <div className="line-clamp-2 text-xs text-body">{[t("scanAction"), t("knowAction"), t("earnAction")][i]}</div>
                   </div>
                 ))}
               </div>
@@ -128,13 +130,12 @@ function Index() {
 
         {/* ABOUT */}
         <section id="about" className="border-t border-border py-12 sm:py-16">
-          <div className="grid gap-8 lg:grid-cols-12">
-            <div className="lg:col-span-5">
-              <h2 className="mt-2 font-display text-3xl tracking-tight text-heading text-balance sm:text-4xl">
-                {t("aboutTitle")}
-              </h2>
-            </div>
-            <div className="space-y-4 text-body text-pretty lg:col-span-7">
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="font-display text-3xl tracking-tight text-heading text-balance sm:text-4xl">
+              {t("navAbout")}
+            </h2>
+            <p className="mx-auto mt-4 max-w-[32ch] text-xl font-semibold text-primary">{t("aboutLead")}</p>
+            <div className="mx-auto mt-7 max-w-[70ch] space-y-4 text-left text-body text-pretty">
               <p>{t("aboutBody1")}</p>
               <p>{t("aboutBody2")}</p>
               <p>{t("impactBody")}</p>
@@ -215,19 +216,19 @@ function Index() {
               <div className="rounded-xl border border-border bg-card p-4">
                 <div className="font-display text-3xl text-primary">62M</div>
                 <div className="mt-1 max-w-[16ch] text-xs text-muted-foreground">
-                  tonnes of waste generated in India each year
+                  {t("marketStatWaste")}
                 </div>
               </div>
               <div className="rounded-xl border border-border bg-card p-4">
                 <div className="font-display text-3xl text-primary">~30%</div>
                 <div className="mt-1 max-w-[16ch] text-xs text-muted-foreground">
-                  formally recovered — the rest moves informally
+                  {t("marketStatRecovered")}
                 </div>
               </div>
               <div className="rounded-xl border border-border bg-card p-4">
                 <div className="font-display text-3xl text-primary">1.5M+</div>
                 <div className="mt-1 max-w-[16ch] text-xs text-muted-foreground">
-                  collectors, sorters and dealers at work
+                  {t("marketStatWorkers")}
                 </div>
               </div>
             </div>
@@ -250,9 +251,10 @@ function Index() {
 
         {/* TEAM */}
         <section id="team" className="border-t border-border py-12 sm:py-16">
-          <h2 className="mt-2 font-display text-3xl tracking-tight text-heading sm:text-4xl">
+          <h2 className="text-center font-display text-3xl tracking-tight text-heading sm:text-4xl">
             {t("teamTitle")}
           </h2>
+          <p className="mx-auto mt-3 max-w-[58ch] text-center text-body">{t("teamIntro")}</p>
           <TeamGrid />
         </section>
       </main>
