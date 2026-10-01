@@ -30,7 +30,7 @@ export function SiteHeader() {
             {t("navAbout")}
           </Link>
           <a href="/#vision" className="hover:text-primary">
-            Our Vision
+            {t("navVision")}
           </a>
           <Link to="/team" className="hover:text-primary">
             {t("navTeam")}
@@ -48,7 +48,7 @@ export function SiteHeader() {
 
           <div
             role="group"
-            aria-label="Language"
+            aria-label={t("languageLabel")}
             className="flex items-center gap-1 rounded-lg bg-secondary p-1 text-xs font-medium"
           >
             {LANGS.map((l) => (
