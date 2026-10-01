@@ -16,6 +16,8 @@ export const Route = createFileRoute("/search")({
         content:
           "Type a scrap name in English, Tamil or Hindi to find its category, indicative rate, recycling pathways and buyers.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { property: "og:title", content: "Search waste types — Scrap Value" },
       {
         property: "og:description",

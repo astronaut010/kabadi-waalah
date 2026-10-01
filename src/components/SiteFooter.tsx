@@ -17,12 +17,12 @@ export function SiteFooter() {
               {t("appName")}
             </div>
             <p className="text-xs text-muted-foreground">
-              A field tool for India's waste collectors.
+              {t("footerDescription")}
             </p>
           </div>
           <div>
             <div className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-heading">
-              Explore
+              {t("footerExplore")}
             </div>
             <ul className="space-y-1.5 text-muted-foreground">
               <li>
@@ -44,7 +44,7 @@ export function SiteFooter() {
           </div>
           <div>
             <div className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-heading">
-              Company
+              {t("footerCompany")}
             </div>
             <ul className="space-y-1.5 text-muted-foreground">
               <li>
@@ -61,7 +61,7 @@ export function SiteFooter() {
           </div>
           <div>
             <div className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-heading">
-              Language
+              {t("footerLanguage")}
             </div>
             <div className="flex flex-col items-start gap-1 text-muted-foreground">
               <span>English</span>

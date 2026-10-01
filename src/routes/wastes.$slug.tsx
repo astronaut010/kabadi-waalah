@@ -23,6 +23,8 @@ export const Route = createFileRoute("/wastes/$slug")({
         { name: "description", content: `${name}: ${loaderData.waste.note.en}` },
         { property: "og:title", content: `${name} — recycling pathways & buyers` },
         { property: "og:description", content: `${name}: ${loaderData.waste.note.en}` },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary" },
       ],
     };
   },

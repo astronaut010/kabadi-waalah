@@ -15,6 +15,8 @@ export const Route = createFileRoute("/wastes/")({
         content:
           "Browse the 20 waste products Indian kabadi walas handle most: category, indicative rate, recycling pathways and buyers.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { property: "og:title", content: "All 20 waste types — Scrap Value" },
       {
         property: "og:description",
