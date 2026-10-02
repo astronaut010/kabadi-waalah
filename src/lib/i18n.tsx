@@ -245,6 +245,8 @@ export const T: Dict = {
   footerLanguage: { en: "Language", ta: "மொழி", hi: "भाषा" },
   languageLabel: { en: "Language", ta: "மொழி", hi: "भाषा" },
   capturedScrapAlt: { en: "Captured scrap", ta: "படம்பிடிக்கப்பட்ட கழிவு", hi: "खींचा गया कबाड़" },
+  heroImageAlt: { en: "A waste collector scanning a pile of scrap with a phone", ta: "கைப்பேசியால் கழிவுக் குவியலை ஸ்கேன் செய்யும் கழிவு சேகரிப்பாளர்", hi: "फ़ोन से कबाड़ के ढेर को स्कैन करता कचरा संग्रहकर्ता" },
+  aboutImageAlt: { en: "A waste collector scanning scrap with a phone", ta: "கைப்பேசியால் கழிவை ஸ்கேன் செய்யும் கழிவு சேகரிப்பாளர்", hi: "फ़ोन से कबाड़ स्कैन करता कचरा संग्रहकर्ता" },
   teamPending: {
     en: "Team details coming soon.",
     ta: "குழு விவரங்கள் விரைவில்.",
