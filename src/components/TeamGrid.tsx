@@ -1,6 +1,6 @@
 import { Linkedin } from "lucide-react";
 import vijaya from "@/assets/vijayapriya.png.asset.json";
-import sowmiya from "@/assets/sowmiyadevi.png.asset.json";
+import sowmiya from "@/assets/sowmiyadevi.jpg.asset.json";
 import { useLang } from "@/lib/i18n";
 
 const TEAM = [
