@@ -277,6 +277,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     if (saved === "en" || saved === "ta" || saved === "hi") setLangState(saved);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
   const setLang = useCallback((l: Lang) => {
     setLangState(l);
     window.localStorage.setItem("sv-lang", l);
