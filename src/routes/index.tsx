@@ -95,7 +95,7 @@ function Index() {
               <div className="overflow-hidden rounded-xl bg-primary-soft">
                 <img
                   src={heroImage}
-                  alt="A waste collector scanning a pile of scrap with a phone"
+                  alt={t("heroImageAlt")}
                   width={1024}
                   height={768}
                   className="aspect-[4/3] w-full object-cover"

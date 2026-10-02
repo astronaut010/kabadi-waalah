@@ -51,14 +51,13 @@ function AboutPage() {
             <div className="overflow-hidden rounded-xl border border-border bg-primary-soft">
               <img
                 src={heroImage}
-                alt="A waste collector scanning scrap with a phone"
+                alt={t("aboutImageAlt")}
                 width={1024}
                 height={768}
                 className="aspect-[16/7] w-full object-cover"
                 loading="lazy"
               />
             </div>
-          </div>
           </div>
         </section>
       </main>

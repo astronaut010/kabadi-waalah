@@ -245,6 +245,14 @@ export const T: Dict = {
   footerLanguage: { en: "Language", ta: "மொழி", hi: "भाषा" },
   languageLabel: { en: "Language", ta: "மொழி", hi: "भाषा" },
   capturedScrapAlt: { en: "Captured scrap", ta: "படம்பிடிக்கப்பட்ட கழிவு", hi: "खींचा गया कबाड़" },
+  heroImageAlt: { en: "A waste collector scanning a pile of scrap with a phone", ta: "கைப்பேசியால் கழிவுக் குவியலை ஸ்கேன் செய்யும் கழிவு சேகரிப்பாளர்", hi: "फ़ोन से कबाड़ के ढेर को स्कैन करता कचरा संग्रहकर्ता" },
+  aboutImageAlt: { en: "A waste collector scanning scrap with a phone", ta: "கைப்பேசியால் கழிவை ஸ்கேன் செய்யும் கழிவு சேகரிப்பாளர்", hi: "फ़ोन से कबाड़ स्कैन करता कचरा संग्रहकर्ता" },
+  notFoundTitle: { en: "Page not found", ta: "பக்கம் கிடைக்கவில்லை", hi: "पेज नहीं मिला" },
+  notFoundBody: { en: "The page you're looking for doesn't exist or has been moved.", ta: "நீங்கள் தேடும் பக்கம் இல்லை அல்லது வேறு இடத்திற்கு மாற்றப்பட்டுள்ளது.", hi: "आप जिस पेज को खोज रहे हैं वह मौजूद नहीं है या कहीं और भेज दिया गया है।" },
+  errorTitle: { en: "This page didn't load", ta: "இந்தப் பக்கம் திறக்கப்படவில்லை", hi: "यह पेज नहीं खुला" },
+  errorBody: { en: "Something went wrong. You can try again or return home.", ta: "ஏதோ தவறு ஏற்பட்டது. மீண்டும் முயற்சிக்கலாம் அல்லது முகப்பிற்குத் திரும்பலாம்.", hi: "कुछ गड़बड़ हुई। आप फिर कोशिश कर सकते हैं या होम पर लौट सकते हैं।" },
+  tryAgain: { en: "Try again", ta: "மீண்டும் முயற்சி", hi: "फिर कोशिश करें" },
+  goHome: { en: "Go home", ta: "முகப்பிற்குச் செல்", hi: "होम पर जाएँ" },
   teamPending: {
     en: "Team details coming soon.",
     ta: "குழு விவரங்கள் விரைவில்.",
@@ -268,6 +276,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     const saved = window.localStorage.getItem("sv-lang") as Lang | null;
     if (saved === "en" || saved === "ta" || saved === "hi") setLangState(saved);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   const setLang = useCallback((l: Lang) => {
     setLangState(l);
