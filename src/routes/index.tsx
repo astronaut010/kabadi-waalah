@@ -7,6 +7,7 @@ import { WASTES } from "@/data/wastes";
 import { useLang } from "@/lib/i18n";
 import heroImage from "@/assets/hero-scan.jpg";
 import { VisionSection } from "@/components/VisionSection";
+import { NoveltySection } from "@/components/NoveltySection";
 import { TeamGrid } from "@/components/TeamGrid";
 
 export const Route = createFileRoute("/")({
@@ -144,6 +145,8 @@ function Index() {
         </section>
 
         <VisionSection />
+
+        <NoveltySection />
 
         {/* FEATURES */}
         <section className="border-t border-border py-12 sm:py-16">

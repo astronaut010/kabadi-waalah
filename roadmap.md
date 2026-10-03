@@ -12,3 +12,5 @@
 - [x] About us / Team pages, including a balanced two-member layout
 - [x] Images in white + #9a2fc4 palette
 - [x] All shared page copy and vision narrative translated in English / Tamil / Hindi
+- [x] Novelty section from market-gap document, translated in English / Tamil / Hindi
+- [x] Use the supplied Scrap Value logo mark in the top bar and browser icon
