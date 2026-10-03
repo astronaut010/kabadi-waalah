@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Camera, Search } from "lucide-react";
 import { LANGS, useLang } from "@/lib/i18n";
+import logoMark from "@/assets/scrap-value-mark.png.asset.json";
 
 export function SiteHeader() {
   const { lang, setLang, t } = useLang();
@@ -9,9 +10,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6">
         <Link to="/" className="flex items-center gap-2.5">
-          <div className="grid size-9 place-items-center rounded-lg bg-primary font-display text-lg leading-none text-primary-foreground">
-            S
-          </div>
+          <img src={logoMark.url} alt="" width={36} height={36} className="size-9 object-contain" />
           <div className="leading-none">
             <div className="font-display text-lg tracking-wide text-heading">
               {t("appName")}
