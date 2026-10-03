@@ -32,6 +32,9 @@ export function SiteHeader() {
           <a href="/#vision" className="hover:text-primary">
             {t("navVision")}
           </a>
+          <a href="/#novelty" className="hover:text-primary">
+            {t("navNovelty")}
+          </a>
           <Link to="/team" className="hover:text-primary">
             {t("navTeam")}
           </Link>
